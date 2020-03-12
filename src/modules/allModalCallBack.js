@@ -1,3 +1,5 @@
+'use strict';
+
 const allModalCallBack = (modalClass, callBtn) => {
 
     const modal = document.querySelector(modalClass);
