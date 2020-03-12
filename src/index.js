@@ -13,4 +13,15 @@ document.addEventListener('DOMContentLoaded', () => {
     allModalCallBack('.popup-discount', 'button.discount-btn');
     allModalCallBack('.popup-check', 'button.check-btn');
     allModalCallBack('.popup-consultation', 'button.consultation-btn');
+
+
+    /**
+     *
+     *  Отправка данных из формы
+     */
+    const sendDataForm = () => {
+
+    };
+
+    sendDataForm();
 });
