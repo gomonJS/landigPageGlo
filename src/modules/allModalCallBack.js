@@ -5,8 +5,6 @@ const allModalCallBack = (modalClass, callBtn) => {
     const modal = document.querySelector(modalClass);
     let btn = document.querySelectorAll(callBtn);
 
-    console.log(modalClass.substring(1,));
-
     [...btn].forEach((element) => {
 
         element.addEventListener('click', (event) => {
