@@ -1,5 +1,6 @@
 import allModalCallBack from "./modules/allModalCallBack";
 import sendDataForm from "./modules/sendDataForm";
+import uploadCard from "./modules/uploadCard";
 
 document.addEventListener('DOMContentLoaded', () => {
     'use strict';
@@ -26,27 +27,5 @@ document.addEventListener('DOMContentLoaded', () => {
      *
      *  Загрузка карточек по клику на кнопку .add-sentence-btn
      */
-    const uploadCard = () => {
-
-        const sentence = document.querySelector('.sentence'),
-            addSentenceBtn = document.querySelector('.add-sentence-btn');
-        let el = sentence.querySelectorAll('.hidden');
-
-        console.log(el);
-
-        addSentenceBtn.addEventListener('click', (event) => {
-
-                event.preventDefault();
-
-                el.forEach((elem) => {
-
-                    elem.classList.remove('hidden');
-                });
-
-                addSentenceBtn.classList.add('hidden');
-        });
-
-    };
-
     uploadCard();
 });
