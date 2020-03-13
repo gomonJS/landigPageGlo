@@ -1,4 +1,5 @@
 import allModalCallBack from "./modules/allModalCallBack";
+import sendDataForm from "./modules/sendDataForm";
 
 document.addEventListener('DOMContentLoaded', () => {
     'use strict';
@@ -16,12 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     /**
-     *
-     *  Отправка данных из формы
+     * Отправка данных из формы
      */
-    const sendDataForm = () => {
-
-    };
-
     sendDataForm();
 });
