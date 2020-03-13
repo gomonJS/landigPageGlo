@@ -88,14 +88,12 @@ const sendDataForm = () => {
                 if (elem.type === 'text') {
                     !(/^[а-яёА-ЯЁ\s\-]+$/).test(elem.value) ?
                         error.add(elem) : error.delete(elem);
-                    console.log(elem.type);
                 }
 
                 if (elem.type === 'tel') {
                     !(/^\+?[78]([-()]*\d){10}$/).test(elem.value) ?
                         error.add(elem) : error.delete(elem);
                     elem.placeholder = '+7(999)-999-99-99';
-                    console.log(elem.type);
                 }
             });
         };
