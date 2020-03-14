@@ -36,4 +36,13 @@ document.addEventListener('DOMContentLoaded', () => {
      */
     accordionQuestions('accordion');
     accordionQuestions('accordion-two');
+
+    /**
+     *  Калькулятор
+     */
+    const calculator = () => {
+
+    };
+
+    calculator();
 });
