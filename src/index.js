@@ -1,6 +1,7 @@
 import allModalCallBack from "./modules/allModalCallBack";
 import sendDataForm from "./modules/sendDataForm";
 import uploadCard from "./modules/uploadCardButton";
+import accordionQuestions from "./modules/accordionQuestions";
 
 document.addEventListener('DOMContentLoaded', () => {
     'use strict';
@@ -18,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     /**
-     * Отправка данных из формы
+     *  Отправка данных из формы
      */
     sendDataForm();
 
@@ -28,4 +29,11 @@ document.addEventListener('DOMContentLoaded', () => {
      *  Загрузка карточек по клику на кнопку .add-sentence-btn
      */
     uploadCard();
+
+
+    /**
+     *  Аккордион
+     */
+    accordionQuestions('accordion');
+    accordionQuestions('accordion-two');
 });

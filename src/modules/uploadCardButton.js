@@ -6,8 +6,6 @@ const uploadCard = () => {
         addSentenceBtn = document.querySelector('.add-sentence-btn');
     let el = sentence.querySelectorAll('.hidden');
 
-    console.log(el);
-
     addSentenceBtn.addEventListener('click', (event) => {
 
         event.preventDefault();

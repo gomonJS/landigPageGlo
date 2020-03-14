@@ -64,7 +64,7 @@ const sendDataForm = () => {
                 statusMessage.textContent = errorMessage;
                 console.error(error);
             });
-
+            console.log(body);
             const timeClearData = setTimeout(() => {
                 statusMessage.remove();
                 form.reset();
