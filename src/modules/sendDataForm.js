@@ -90,6 +90,11 @@ const sendDataForm = () => {
                         error.add(elem) : error.delete(elem);
                 }
 
+                if (elem.type === 'hidden') {
+                    !(/^[а-яёА-ЯЁ\s\-]+$/).test(elem.value) ?
+                        error.add(elem) : error.delete(elem);
+                }
+
                 if (elem.type === 'tel') {
                     !(/^\+?[78]([-()]*\d){10}$/).test(elem.value) ?
                         error.add(elem) : error.delete(elem);
