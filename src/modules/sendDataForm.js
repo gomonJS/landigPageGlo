@@ -91,7 +91,12 @@ const sendDataForm = () => {
                 }
 
                 if (elem.type === 'hidden') {
-                    !(/^[а-яёА-ЯЁ\s\-]+$/).test(elem.value) ?
+                    !(/^[а-яёА-ЯЁ0-9\s\-]+$/).test(elem.value) ?
+                        error.add(elem) : error.delete(elem);
+                }
+
+                if (elem.type === 'num') {
+                    !(/\w/).test(elem.value) ?
                         error.add(elem) : error.delete(elem);
                 }
 
