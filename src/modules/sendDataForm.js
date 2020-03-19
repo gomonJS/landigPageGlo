@@ -113,7 +113,7 @@ const sendDataForm = () => {
         form.addEventListener('change', init);
 
         form.addEventListener('submit', (event) => {
-            
+
             event.preventDefault();
 
             let errorType = [];
