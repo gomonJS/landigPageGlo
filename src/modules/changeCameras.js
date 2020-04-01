@@ -12,8 +12,6 @@ const addInputSum = (selectorDiscount, constructorValue = '') => {
     inputHidden.style.display = 'none';
 
     form.append(inputHidden);
-
-    console.log(form);
 };
 
 const changeCameras = () => {

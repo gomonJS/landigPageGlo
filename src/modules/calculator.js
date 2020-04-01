@@ -8,11 +8,15 @@ const calculator = () => {
     const select = accordion.querySelectorAll('select');
     const calcResult = document.getElementById('calc-result');
 
+    const panelThree = document.querySelector('.panel-three');
+
+
+
     let selectCountOne = 0,
         selectCountTwo = 0,
         selectCountThree = 0,
         selectCountFour = 0,
-        wellAvailability = 0,
+        wellAvailability = 1000,
         startValue = 10000;
 
 
@@ -27,8 +31,10 @@ const calculator = () => {
 
         if (target.value === '10000') {
             myOnOffSwitch.value = startValue + 5000;
+            wellAvailability = 1000;
         } else if (target.value === '15000') {
             myOnOffSwitch.value = startValue;
+            wellAvailability = 2000;
         }
 
         // если 1 блок изменился сбрасываем все пункты во втором блоке
@@ -40,6 +46,8 @@ const calculator = () => {
         countSum = +myOnOffSwitch.value;
 
         calcResult.value = countSum;
+
+        console.log(wellAvailability);
     });
 
     calcResult.value = countSum;
@@ -112,20 +120,39 @@ const calculator = () => {
             selectCountThree + selectCountFour;
     });
 
-    if (myOnOffSwitchTwo.checked) {
-        if (myOnOffSwitch.value === '10000') {
-            wellAvailability = 1000;
-        } else if (myOnOffSwitch.value === '15000') {
-            wellAvailability = 2000;
-        }
-    }
+
+    // panelThree.addEventListener('click', e => {
+    //
+    //     let target = e.target;
+    //
+    //     target = target.matches('#myonoffswitch-two');
+    //
+    //     if(target){
+    //         if(myOnOffSwitchTwo.checked) {
+    //             wellAvailability = 1000;
+    //         } else {
+    //             wellAvailability = 0;
+    //         }
+    //     }
+    //
+    //     calcResult.value =
+    //         countSum + selectCountOne + selectCountTwo +
+    //         selectCountThree + selectCountFour + wellAvailability;
+    // });
 
     myOnOffSwitchTwo.addEventListener('change', (event) => {
 
         let target = event.target;
 
-        wellAvailability = 0;
+        let temp = wellAvailability;
 
+        console.log(temp);
+
+        if (target) {
+            wellAvailability = 0;
+        } else {
+            wellAvailability = temp;
+        }
 
         calcResult.value =
             countSum + selectCountOne + selectCountTwo +
